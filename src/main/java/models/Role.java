@@ -10,13 +10,13 @@ public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int row_id;
 
     @Column(name = "name")
     private String name;
 
-    public int getId() {
-        return id;
+    public Integer getRow_id() {
+        return row_id;
     }
 
     public String getName() {
@@ -30,7 +30,7 @@ public class Role {
     @Override
     public String toString() {
         return "Role{" +
-                "id=" + id +
+                "id=" + row_id +
                 ", name='" + name + '\'' +
                 '}';
     }

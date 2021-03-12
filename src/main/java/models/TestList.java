@@ -10,7 +10,7 @@ public class TestList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int row_id;
 
     @Column(name = "name")
     private String name;

@@ -1,6 +1,7 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -11,23 +12,23 @@ public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int row_id;
 
     @Column(name = "text")
     private String text;
 
-    private int score;
+    private Integer score;
 
     private boolean active;
 
-    @OneToMany(mappedBy = "answer", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Answer> answerList;
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Answer> answerList = new ArrayList<>();
 
-    public Integer getId() {
-        return id;
+    public Integer getRow_id() {
+        return row_id;
     }
 
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
@@ -67,11 +68,11 @@ public class Question {
     @Override
     public String toString() {
         return "Question{" +
-                "id=" + id +
+                "id=" + row_id +
                 ", text='" + text + '\'' +
                 ", score=" + score +
                 ", active=" + active +
-                ", answerList=" + answerList +
+//                ", answerList=" + answerList +
                 '}';
     }
 }

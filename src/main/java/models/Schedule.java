@@ -10,10 +10,10 @@ public class Schedule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int row_id;
 
     @Column(name = "duration")
-    private int duration;
+    private Integer duration;
 
     private String start_dt;
 

@@ -10,7 +10,8 @@ public class Answer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name="row_id")
+    private int row_id;
 
     @Column(name = "text")
     private String text;
@@ -21,8 +22,8 @@ public class Answer {
     @JoinColumn(name = "question_id")
     private Question question;
 
-    public int getId() {
-        return id;
+    public Integer getRow_id() {
+        return row_id;
     }
 
     public String getText() {
@@ -48,7 +49,7 @@ public class Answer {
     @Override
     public String toString() {
         return "Answer{" +
-                "id=" + id +
+                "id=" + row_id +
                 ", text='" + text + '\'' +
                 ", correct=" + correct +
                 ", question=" + question +

@@ -10,7 +10,7 @@ public class StudentAnswer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int row_id;
 
 
 }

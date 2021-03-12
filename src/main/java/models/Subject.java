@@ -10,7 +10,7 @@ public class Subject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int row_id;
 
     @Column(name = "name")
     private String name;
@@ -26,7 +26,7 @@ public class Subject {
     @Override
     public String toString() {
         return "Subject{" +
-                "id=" + id +
+                "id=" + row_id +
                 ", name='" + name + '\'' +
                 '}';
     }

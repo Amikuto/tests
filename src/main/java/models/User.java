@@ -3,14 +3,14 @@ package models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
     public User(){}
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int row_id;
 
     @Column(name = "first_name")
     private String first_name;
@@ -23,9 +23,9 @@ public class User {
 
     private String password_hash;
 
-    @OneToOne(mappedBy = "group", cascade = CascadeType.ALL, orphanRemoval = true)
-    private int group_id;
+//    @OneToOne(mappedBy = "group", cascade = CascadeType.ALL, orphanRemoval = true)
+//    private int group_id;
 
-    private int role_id;
+    private Integer role_id;
 
 }

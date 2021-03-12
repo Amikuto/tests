@@ -10,17 +10,17 @@ public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private int row_id;
 
     @Column(name = "name")
     private String name;
 
-    private int year;
+    private Integer year;
 
-    private int semester;
+    private Integer semester;
 
-    public Integer getId() {
-        return id;
+    public Integer getRow_id() {
+        return row_id;
     }
 
     public String getName() {
@@ -50,7 +50,7 @@ public class Group {
     @Override
     public String toString() {
         return "Group{" +
-                "id=" + id +
+                "id=" + row_id +
                 ", name='" + name + '\'' +
                 ", year=" + year +
                 ", semester=" + semester +
